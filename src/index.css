@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    line-height: 1.5;
+    font-weight: 400;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+
+    /* declare app colours */
+    --brand-primary: #51b6e5;
+    --brand-secondary: #0074b7;
+    --brand-secondary-90: #2b82bf;
+
+  }
+
+  input {
+    @apply border border-gray-400 hover:border-sky-600 shadow-xs
+      bg-gray-50 hover:bg-blue-50
+      text-black font-normal
+      w-full max-w-94 lg:max-w-[calc(100%_-_50px)] p-2;
+  }
+  select  {
+    @apply border border-gray-400 hover:border-sky-600 shadow-xs
+      bg-gray-50 hover:bg-blue-50
+      w-full max-w-80 p-2
+      cursor-pointer;
+  }
+}
+
+@layer components {
+  .input__label {
+   @apply text-[var(--brand-secondary)] font-medium flex flex-col;
+  }
+
+  .input__deco--percent {
+    @apply text-xl absolute z-10 right-0 bottom-0
+      transform -translate-x-1/2 -translate-y-1/4 md:-translate-x-[150%];
+  }
+
+  .input__deco--currency {
+    @apply text-xl absolute z-10 right-0 bottom-0
+      transform -translate-x-1/2 -translate-y-1/4 md:-translate-x-[150%];
+  }
+}
+
+@layer utilities {
+}
+
+
